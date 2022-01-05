@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    background: linear-gradient(120deg,#f6d365,#fda085);
+    color: white;
+    animation: fluidAni 2s ease infinite;
+    background-size: 400% 400%;
+}
+
+header{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+@keyframes fluidAni {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+form button, form input, .list-item{
+    outline: 0;
+    border: none;
+    padding: 1rem;
+    font-size: 1.75rem;
+    border-radius: 1rem;
+}
+
+form input, .list-item{
+    color: #f6d365;
+    animation: fluidTxt 2s ease infinite;
+    background: white;
+    transition: 0.75s ease-out;
+}
+
+@keyframes fluidTxt{
+    50%{color: #fda085};
+    100%{color: #f6d365};
+}
+
+form button{
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s ease;
+}
+
+form button:hover{
+    background: white;
+    color: #f6d365;
+    animation: fluidTxt 2s ease infinite;
+}
+
+form button:active{
+    background: transparent;
+    color: white;
+    animation: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.list-item{
+    width: calc(100% / 3);
+    margin: 2rem calc(100% / 3) 2rem calc(100% / 3);
+}
